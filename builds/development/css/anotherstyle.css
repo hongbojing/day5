@@ -33,4 +33,7 @@ pre.center{
     width: 60%;
     border: #F2773F solid;
 }
-
+#paperDiv1{
+    width: 600px;
+    height: 600px;
+}

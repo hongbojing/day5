@@ -2,11 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>day #</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>day5 raphael js component drop down colorful flag</title>
+  <link rel="stylesheet" href="css/myStyle.css">
+  <link rel="stylesheet" href="css/anotherstyle.css">
 </head>
-<body>
+<body id="paperDiv3">
+  <h1>Raphael JS</h1>
+  <h3>Dropdown Flag</h3>
+  <div id="paperDiv1" class="center"></div>
 
 
+
+  <script src="js/lib/raphael-min.js"></script>
+  <script>
+
+
+    var paper1=Raphael("paperDiv1",600,600);
+
+    var rect6=paper1.rect(0,0,600,100).attr({
+      "fill":"red"
+    });
+    var rect5=paper1.rect(0,0,600,100).attr({
+      "fill":"orange"
+    });
+    var rect4=paper1.rect(0,0,600,100).attr({
+      "fill":"yellow"
+    });
+    var rect3=paper1.rect(0,0,600,100).attr({
+      "fill":"green"
+    });
+    var rect2=paper1.rect(0,0,600,100).attr({
+      "fill":"blue"
+    });
+    var rect1=paper1.rect(0,0,600,100).attr({
+      "fill":"purple",
+      "cursor":"pointer"
+    });
+    rect1.click(function(){
+      rect2.animate({"transform":"t0,100","fill-opacity":0.7},1000,"linear"),
+        rect3.animate({"transform":"t0,200","fill-opacity":0.7},1000,"linear"),
+        rect4.animate({"transform":"t0,300","fill-opacity":0.7},1000,"linear"),
+        rect5.animate({"transform":"t0,400","fill-opacity":0.7},1000,"linear"),
+        rect6.animate({"transform":"t0,500","fill-opacity":0.7},1000,"linear"),
+        rect1.animate({"fill-opacity":0.7},1000)
+    });
+    rect1.mouseout(function(){
+      rect2.animate({"transform":""},1000,"linear"),
+        rect3.animate({"transform":""},1000,"linear"),
+        rect4.animate({"transform":""},1000,"linear"),
+        rect5.animate({"transform":""},1000,"linear"),
+        rect6.animate({"transform":""},1000,"linear")
+
+    });
+  </script>
 </body>
 </html>
